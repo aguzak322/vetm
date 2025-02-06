@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vetments</title>
+    <title>vetments</title>
     <link rel="stylesheet" href="vet.css">
 </head>
 <script>
     function goToPage(url) {
         window.open(url, '_self');
     }
+    function changeImage(element) {
+        document.getElementById("bigImage").src = element.src;
+    }
 </script>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <img src="photo/Fashion Katalog.png" alt="" class="logo" onclick="goToPage('https://aguzak322.github.io/main-page/')">
-        </div>
-        <div class="headerec"></div>
-        <div class="vetf">
-            <div class="small_container">
-                <div class="scren"></div>
-                <div class="scren"></div>
-                <div class="scren"></div> 
-                </div>
-            <img src="photo/vetments1.png" alt="" class="sha">
-            <img src="photo/VETEMENTS_logo.png" alt="" class="vlog">
-            <div class="opis">
-                Описание: <br>
-                -Каждый человек имеет право <br>
-                -Каждый человек имеет право <br>
-                -Каждый человек имеет право <br>
-                -Каждый человек имеет право <br>
-                -Каждый человек имеет право <br>
+    <img src="photo/Fashion Katalog.png" alt="" class="logo" onclick="goToPage('')">
+    <div class="headline"></div>
+    <img src="photo/VETEMENTS_logo.png" alt="" class="logov">
+    <div class="sizes">
+        <button class="small">small</button>
+        <button class="mid">medium</button>
+        <button class="large">large</button>
+    </div>
+    <div class="buy">
+        <button class="gbuy">добавить в корзину</button>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <div class="thumbnails">
+                <img src="/photo/vet1.png" onclick="changeImage(this)">
+                <img src="/photo/vet2.png" onclick="changeImage(this)">
+                <img src="/photo/vetments1.png" onclick="changeImage(this)">
             </div>
-            <button class="buy">ГДЕ КУПИТЬ??</button>
+            <div class="main-image">
+                <img id="bigImage" src="photo/vetments1.png">
+            </div>
         </div>
     </div>
 </body>
